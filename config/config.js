@@ -4,15 +4,16 @@ module.exports = {
 		username: process.env.DB_user,
 		password: process.env.DB_password,
 		database: process.env.DB_name,
+		// database: "db_test",
 		host: process.env.DB_host,
 		dialect: "mysql",
 		define: { underscored: true }
 	},
 	test: {
-		username: "root",
-		password: null,
+		username: process.env.DB_user,
+		password: process.env.DB_password,
 		database: "db_test",
-		host: "127.0.0.1",
+		host: process.env.DB_host,
 		dialect: "mysql",
 		define: { underscored: true }
 	},

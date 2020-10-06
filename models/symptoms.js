@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
 			// define association here
 			this.belongsToMany(models.Patients, {
 				through: models.SymptomsByPatients,
-				uniqueKey: symptomId
+				uniqueKey: "symptomId"
 			});
 		}
 	}

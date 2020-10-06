@@ -11,11 +11,11 @@ module.exports = (sequelize, DataTypes) => {
 			// define association here
 			this.belongsToMany(models.Symptoms, {
 				through: models.SymptomsByPatients,
-				uniqueKey: patientId
+				uniqueKey: "patientId"
 			});
-			this.hasMany(models.CovidTests, { foreignKey: patientId });
-			this.belongsTo(model.Cities);
-			this.belongsTo(model.Hospitals);
+			this.hasMany(models.CovidTests, { foreignKey: "patientId" });
+			this.belongsTo(models.Cities);
+			this.belongsTo(models.Hospitals);
 		}
 	}
 	Patients.init(
